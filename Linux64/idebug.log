@@ -1,0 +1,56 @@
+# MPD log
+#Info (TC_CN) New client (fd=9)
+1-mpd-connection-info
+2-gdb-set substitute-path /home/moore/Imperas /home/moore/Imperas
+3-mpd-list-processor-info
+4-break-insert --thread 1 main
+5-mpd-list-processor-info
+6-mpd-context-info
+7-mpd-list-processor-info
+8-stack-info-depth --thread 1 11
+9-file-list-exec-source-files --thread 1
+10-stack-list-frames --thread 1
+11-mpd-list-register-groups --thread 1
+12-stack-list-arguments --thread 1 1
+13-stack-list-locals --thread 1 --frame 0 1
+b main
+#Created breakpoint 2 at 0x000101e0: file hello.c, line 4
+c
+#
+#Breakpoint 1 at main triggered for processor cpu0
+#
+#main () at hello.c:4
+#4	    asm("vsetvl a0, a1, a2");
+14-stack-info-depth --thread 1 2
+15-mpd-list-processor-info
+16-stack-list-locals --thread 1 --frame 0 1
+17-data-disassemble --thread 1 -s 66016 -e 66080 -- 3
+18-data-disassemble --thread 1 -s 66060 -e 66132 -- 3
+19-data-disassemble --thread 1 -s 66060 -e 66132 -- 2
+set usegdbdisassembly 1
+20-data-disassemble --thread 1 -s 66016 -e 66156 -- 3
+21-data-disassemble --thread 1 -s 66060 -e 66132 -- 3
+22-data-disassemble --thread 1 -s 66060 -e 66132 -- 2
+set usegdbdisassembly 0
+23-data-disassemble --thread 1 -s 66016 -e 66080 -- 3
+24-data-disassemble --thread 1 -s 66016 -e 66080 -- 2
+25-data-list-register-names --thread 1
+26-var-create --thread 1 --frame 0 - *
+27-exec-step-instruction --thread 1 1
+#
+#Breakpoint 2 at main triggered for processor cpu0
+#
+#main () at hello.c:4
+#4	    asm("vsetvl a0, a1, a2");
+28-stack-info-depth --thread 1 2
+29-mpd-list-processor-info
+30-stack-list-locals --thread 1 --frame 0 1
+31-exec-step-instruction --thread 1 1
+#5	    asm("add a0, a1, a2");
+32-mpd-list-processor-info
+33-stack-list-arguments --thread 1 1
+34-stack-list-locals --thread 1 --frame 0 1
+35-stack-info-depth --thread 1 11
+36-stack-list-frames --thread 1
+37quit
+# End MPD log

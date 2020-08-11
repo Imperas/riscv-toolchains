@@ -1,0 +1,43 @@
+this is based upon a branch of binutils and an existing gcc toolchain
+SIFIVE=/home/tools/local/Linux64/sifive-riscv-none
+EMBED=/home/tools/local/Linux64/riscv-none-embed
+
+sifive-riscv-none is a branch, built from the following
+
+# Source
+# https://github.com/sifive/riscv-binutils-gdb
+# select Branch rvv / sifive-binutils-2.33.1-rvv-0.8.x
+# https://github.com/sifive/riscv-binutils-gdb/tree/rvv
+
+# which branch ?
+git clone https://github.com/sifive/riscv-binutils-gdb -b vvv
+git clone https://github.com/sifive/riscv-binutils-gdb -b sifive-binutils-2.33.1-rvv-0.8.x
+
+---- or ----
+rlogin lnx6471 && cd /scratch/moore/sifive
+download from https://github.com/sifive/riscv-binutils-gdb/tree/rvv
+unzip ZIPFILE
+
+#
+# build
+#
+mkdir install
+INSTALL=$(pwd)/install
+cd riscv-binutils-gdb
+export PATH=/usr/bin:${PATH}
+./configure --prefix=${INSTALL} --target=riscv --program-prefix=sifive-riscv-none-
+make -j8
+make install
+
+su - tools 
+rm -rf /home/tools/local/Linux64/sifive-riscv-none.0.8
+mkdir /home/tools/local/Linux64/sifive-riscv-none.0.8
+cd ${INSTALL}
+tar cvf - * | (cd /home/tools/local/Linux64/sifive-riscv-none.0.8; tar xvf -)
+
+run and fix test Regression_Tests/CpuManager/riscv_ops/customTrace/disassemble_vectors
+using ./riscv-binutils-gdb/gas/testsuite/gas/riscv/vector-insns.s
+
+#
+# Now look at the MERGE script MERGE-TOOLS.sh
+#
