@@ -4,7 +4,7 @@ This is where we keep up-to-date binaries of the GNU toolchains that are used in
 
 We put different versions in different branches.
 
-For example in branch rvv-0.8.x is a stable toochain for RISC-V which includes support of the Vector extension to rev v0.8.
+For example in branch rvv-0.8.x is a stable toolchain for RISC-V which includes support of the Vector extension to rev v0.8.
 The branch rvv-0.9.x is for vectors 0.9 etc.
 
 The source of these are all from other GitHub repositories and we compile them up and make them available here as service to make it easy to just download working versions of the tools.
