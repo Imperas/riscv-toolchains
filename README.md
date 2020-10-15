@@ -9,6 +9,6 @@ RISCV_TUPLE=riscv-none-embed
 
 export RISCV_PREFIX=${RISCV_TUPLE}-
 
-export RISCV_TOOLCHAIN=${TOPDIR}/riscv-toolchains/${IMPERAS_ARCH}/sifive-riscv-none-gcc
+export RISCV_TOOLCHAIN=${TOPDIR}/riscv-toolchains/Linux64/sifive-riscv-none-gcc
 
 export PATH=${PATH}:${RISCV_TOOLCHAIN}/bin
