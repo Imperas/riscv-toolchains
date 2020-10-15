@@ -2,6 +2,7 @@
 
 # directory in which toolchain cloned using 
 #   git clone https://github.com/Imperas/riscv-toolchains -b rvv-0.8.x
+
 TOPDIR=$(pwd)
 
 # for vector rvv-0.8.x
