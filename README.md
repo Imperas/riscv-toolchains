@@ -5,8 +5,8 @@ branch rvv-0.8x with support for [RiscV Vector specification version 0.8](https:
 ```
 git clone https://github.com/Imperas/riscv-toolchains -b rvv-0.8.x
 TOPDIR=$(pwd)
-RISCV_TUPLE=riscv64-unknown-elf
+RISCV_TUPLE=riscv-none-embed
 export RISCV_PREFIX=${RISCV_TUPLE}-
-export RISCV_TOOLCHAIN=${TOPDIR}/riscv-toolchains/Linux64
+export RISCV_TOOLCHAIN=${TOPDIR}/riscv-toolchains/Linux64/sifive-riscv-none-gcc
 export PATH=${PATH}:${RISCV_TOOLCHAIN}/bin
-riscv64-unknown-elf-gcc --target-help
+riscv-none-embed-gcc --target-help
