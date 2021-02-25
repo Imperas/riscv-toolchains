@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------
+gcc:
+commit 9cf8d0c11b8f42ae6fca9cecef93fbd28c4f8fe6
+Author: Kito Cheng <kito.cheng@gmail.com>
+Date:   Thu May 23 11:48:34 2019 +0800
+
+    Update unspec code for kdm*16 and khm*16 instructions
+--------------------------------------------------------------------------------
+binutils:
+commit 39f92bdd588f8c68cdef4e3f33d6f2036bab9c4d
+Author: Rex Zhuo <rex.zhuo@outlook.com>
+Date:   Tue Apr 30 17:59:20 2019 +0800
+
+    P extension
+--------------------------------------------------------------------------------
+newlib:
+commit 77e11e1800f57cac7f5468b2bd064100a44755d4
+Author: Denis Ivanov <denis.ivanov@cloudbear.ru>
+Date:   Thu Jul 12 16:48:54 2018 +0300
+
+    Fixed errno sign in _sbrk.
+--------------------------------------------------------------------------------
+libdsp:
+commit 018795cba197cf9c08c478db941fb3d42cd2af35
+Author: sharon <sharon@andestech.com>
+Date:   Mon May 20 17:07:52 2019 +0800
+
+    [TEST CASE] Fixed the error empty size for contorller functions.
+--------------------------------------------------------------------------------
+gdb:
+commit 02024b58f07478da14ad01e3686e1ddc76c32342
+Author: Kito Cheng <kito.cheng@gmail.com>
+Date:   Tue Apr 30 17:59:20 2019 +0800
+
+    P extension with gdb sim
