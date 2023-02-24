@@ -1,0 +1,7 @@
+/* Generated automatically. */
+static const char configuration_arguments[] = "../../gcc/configure --target=riscv32-corev-elf --prefix=/build/workspace/corev-gcc-ubuntu1804/install --with-sysroot=/build/workspace/corev-gcc-ubuntu1804/install/riscv32-corev-elf --with-native-system-header-dir=/include --with-newlib --disable-shared --enable-languages=c,c++ --enable-tls --disable-werror --disable-libmudflap --disable-libssp --disable-quadmath --disable-libgomp --disable-nls --enable-multilib --with-multilib-generator='rv32e-ilp32e--c rv32ea-ilp32e--m rv32em-ilp32e--c rv32eac-ilp32e-- rv32emac-ilp32e-- rv32i-ilp32--c rv32ia-ilp32--m rv32im-ilp32--c rv32if-ilp32f-rv32ifd-c rv32iaf-ilp32f-rv32imaf,rv32iafc-d rv32imf-ilp32f-rv32imfd-c rv32iac-ilp32-- rv32imac-ilp32-- rv32imafc-ilp32f-rv32imafdc- rv32ifd-ilp32d--c rv32imfd-ilp32d--c rv32iafd-ilp32d-rv32imafd,rv32iafdc- rv32imafdc-ilp32d-- rv64i-lp64--c rv64ia-lp64--m rv64im-lp64--c rv64if-lp64f-rv64ifd-c rv64iaf-lp64f-rv64imaf,rv64iafc-d rv64imf-lp64f-rv64imfd-c rv64iac-lp64-- rv64imac-lp64-- rv64imafc-lp64f-rv64imafdc- rv64ifd-lp64d--m,c rv64iafd-lp64d-rv64imafd,rv64iafdc- rv64imafdc-lp64d--' --with-arch=rv32imac --with-abi=ilp32 --with-bugurl=''\\''https://www.embecosm.com'\\''' --with-pkgversion=''\\''corev-openhw-gcc-ubuntu1804-20230220'\\'''";
+static const char thread_model[] = "single";
+
+static const struct {
+  const char *name, *value;
+} configure_default_options[] = { { "abi", "ilp32" }, { "arch", "rv32imac" }, { "isa_spec", "20191213" } };
